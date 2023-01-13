@@ -1,0 +1,91 @@
+.MobileMenu{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  &.Open{
+    transform: translateX(0);
+
+    background: white;
+    max-width: 320px;
+  }
+  &.Close{
+    transform: translateX(-100%);
+  }
+
+  .MobileHeaderWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .CloseIconWrapper {
+      display: flex;
+      align-items: center;
+      svg {
+        cursor: pointer;
+        right: 1.3rem;
+        position: absolute;
+      }
+    }
+    .LogoWrapper{
+      width: 10rem;
+      height: 1.5rem;
+    }
+  }
+  hr{
+    margin: 1.6rem 0;
+  }
+  .MobileMenuElement{
+    ul{
+      padding-left: 1.25rem;
+      div{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        li{
+          list-style-type: none;
+          font-size: 1rem;
+          font-weight: 500;
+          font-family: RobotoMedium, sans-serif;
+        }
+        svg{
+          margin-left: 5px;
+        }
+        &:last-of-type svg{
+          display: none;
+        }
+      }
+
+    }
+    hr{
+      margin: 1rem 0;
+    }
+
+  }
+
+}
+.HamburgerIconWrapper{
+  position: absolute;
+  left: 1.25rem;
+  cursor: pointer;
+  top: 0;
+}
+.Backdrop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.6);
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  transition: transform 0.3s ease-in-out;
+  &.Open{
+    transform: translateX(0);
+
+  }
+  &.Close{
+    transform: translateX(-100%);
+  }
+}

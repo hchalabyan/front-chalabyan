@@ -1,0 +1,126 @@
+.BannerWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 595px;
+  margin: 30px auto;
+  .FirstBanner{
+    background: url("../../assets/sliderImages/banner1.svg")  no-repeat center;
+    width: 100%;
+    height: 695px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 95px;
+    box-sizing: border-box;
+    p,h1{
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+    }
+    .animate{
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+  }
+  .SecondBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    transform: translateY(-100%);
+    height: 0;
+    opacity: 0;
+    background-color: #F4F4F4;
+    color: #262626;
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5s;
+    overflow-y: hidden;
+    padding: 0 94.5px;
+    box-sizing: border-box;
+    text-align: center;
+    p,a{
+      opacity: 0;
+      transition: all 1.5s ease-in-out;
+      transition-delay: 1s;
+    }
+    h1{
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    p{
+      text-align: center;
+      text-transform: uppercase;
+      &.Info{
+        color:#747474
+      }
+
+    }
+    .SecondBannerImage{
+      background: url("../../assets/sliderImages/banner2.png")  no-repeat center;
+      width: 100%;
+      height: 0;
+      opacity: 0;
+      transition: all 1.5s ease-in-out;
+      transition-delay: 1s;
+      margin-bottom: 7rem;
+    }
+
+    &.showSecondBanner{
+      height: 695px;
+      transform: translateY(-100%);
+      opacity: 1;
+      .SecondBannerImage{
+        height: 225px;
+        opacity: 1;
+        transition: all 1.5s ease-in-out;
+        transition-delay: 1s;
+      }
+      p,h1,a{
+        opacity: 1;
+        transition: all 1.5s ease-in-out;
+        transition-delay: 1s;
+      }
+      h1{
+        transform: translateY(0);
+      }
+
+    }
+    .Footer{
+      position: absolute;
+      bottom:94.5px ;
+      padding: 50px 94.5px 0 94.5px;
+      height: 94px;
+    }
+    .ShopAll{
+      position: relative;
+      img{
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        height: 15px;
+        transform: rotateZ(20deg);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+      }
+      a{
+        text-decoration: underline;
+        cursor: pointer;
+        margin-left: initial;
+        transition: margin-left .3s ease-in-out;
+      }
+      &:hover img{
+        opacity: 1;
+        left: 55%;
+      }
+      &:hover a{
+        margin-left: -10%;
+      }
+    }
+  }
+
+}

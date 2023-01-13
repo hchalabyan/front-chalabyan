@@ -5,9 +5,45 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: RobotoMedium;
+  src: url(./fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url(./fonts/Roboto-Bold.ttf);
+}
+.SliderBtn{
+  display: flex;
+  align-items: center;
+  border: 1px solid #999999;
+  background: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 7rem;
+  height: 2rem;
+  margin: 2rem auto;
+  background: #EB0028;
+}
+.SliderBtn a{
+  text-decoration: none;
+  color:white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }

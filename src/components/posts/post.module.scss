@@ -1,0 +1,50 @@
+@media (max-width: 560px) and (min-width: 320px){
+  .Post {
+    max-width: 20.9rem;
+  }
+}
+
+.PostsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 3rem auto 0 auto;
+  flex-wrap: wrap;
+  max-width: 72.5rem;
+  column-gap: 40px;
+  row-gap: 48px;
+  .Post {
+    max-width: 22.5rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .Category {
+      font-size: 0.813rem;
+      color: #EB0028;
+      font-family: RobotoBold, sans-serif;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .SubTitle {
+      font-size: 0.75rem;
+      font-family: RobotoMedium, sans-serif;
+
+      span {
+        color: #9B9B9B;
+
+        &:first-of-type {
+          margin: 0 0.813rem;
+        }
+      }
+    }
+
+    .Content {
+      font-size: 0.875rem;
+      color: #929292;
+    }
+  }
+}
